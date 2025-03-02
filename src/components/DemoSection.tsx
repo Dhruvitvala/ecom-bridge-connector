@@ -66,7 +66,7 @@ export function DemoSection() {
         payment_method: "stripe",
         payment_method_title: "Credit Card",
         status: "processing",
-        customer_id": 5,
+        customer_id: 5,
         billing: {
           first_name: "Jane",
           last_name: "Smith",
@@ -90,7 +90,7 @@ export function DemoSection() {
       },
       order: {
         store_id: 0,
-        customer_id": 5,
+        customer_id: 5,
         firstname: "Alex",
         lastname: "Johnson",
         email: "alex.johnson@example.com",
@@ -150,7 +150,7 @@ export function DemoSection() {
       order: {
         entity: {
           status: "processing",
-          customer_id": 5,
+          customer_id: 5,
           customer_email: "jane.smith@example.com",
           customer_firstname: "Jane",
           customer_lastname: "Smith",
@@ -167,7 +167,7 @@ export function DemoSection() {
     opencart: {
       discount: {
         coupon: {
-          primary_coupon_id": 5623,
+          primary_coupon_id: 5623,
           code: "HOLIDAY15",
           discount_amount: 15,
           discount_type: "percent",
@@ -177,7 +177,7 @@ export function DemoSection() {
       order: {
         entity: {
           store_id: 0,
-          customer_id": 5,
+          customer_id: 5,
           customer_email: "alex.johnson@example.com",
           customer_firstname: "Alex",
           customer_lastname: "Johnson",
@@ -198,7 +198,7 @@ export function DemoSection() {
     shopify: {
       discount: {
         discount: {
-          id": "disc_123456",
+          id: "disc_123456",
           code: "SUMMER2023",
           value: 15,
           value_type: "percentage",
@@ -209,17 +209,17 @@ export function DemoSection() {
       },
       order: {
         order: {
-          id": "order_789012",
-          order_number": 1001,
+          id: "order_789012",
+          order_number: 1001,
           financial_status: "paid",
           total_price: "99.95",
           customer: {
-            id": "cust_345678",
+            id: "cust_345678",
             email: "john.doe@example.com"
           },
           line_items: [
             {
-              id": "line_901234",
+              id: "line_901234",
               title: "Premium Widget",
               price: "19.99",
               quantity: 2
@@ -232,7 +232,7 @@ export function DemoSection() {
     woocommerce: {
       discount: {
         coupon: {
-          id": 56,
+          id: 56,
           code: "SALE20",
           discount_type: "percent",
           amount: "20",
@@ -242,14 +242,14 @@ export function DemoSection() {
         }
       },
       order: {
-        id": 741,
+        id: 741,
         status: "processing",
         payment_method: "stripe",
         payment_method_title: "Credit Card",
-        customer_id": 5,
+        customer_id: 5,
         line_items: [
           {
-            id": 315,
+            id: 315,
             product_id: 93,
             quantity: 2
           }
@@ -259,7 +259,7 @@ export function DemoSection() {
     opencart: {
       discount: {
         success: true,
-        coupon_id": "5623",
+        coupon_id: "5623",
         name: "Holiday Special",
         code: "HOLIDAY15",
         type: "P",
@@ -267,13 +267,13 @@ export function DemoSection() {
       },
       order: {
         success: true,
-        order_id": "12345",
-        order_status_id": "1",
-        customer_id": "5",
+        order_id: "12345",
+        order_status_id: "1",
+        customer_id: "5",
         email: "alex.johnson@example.com",
         products: [
           {
-            product_id": "2345",
+            product_id: "2345",
             name: "Basic Widget",
             quantity: 1
           }
