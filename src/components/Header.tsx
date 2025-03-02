@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +16,13 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6',
@@ -27,22 +35,45 @@ export function Header() {
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <a 
+            href="#features" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('features');
+            }}
+          >
             Features
           </a>
-          <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <a 
+            href="#how-it-works" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('how-it-works');
+            }}
+          >
             How It Works
           </a>
-          <a href="#demo" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+          <a 
+            href="#demo" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('demo');
+            }}
+          >
             Demo
           </a>
         </nav>
         
         <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex">
+          <Button variant="outline" size="sm" className="hidden sm:inline-flex" onClick={() => window.open('/documentation', '_blank')}>
             Documentation
           </Button>
-          <Button size="sm">Get Started</Button>
+          <Button size="sm" onClick={() => window.open('/get-started', '_blank')}>
+            Get Started
+          </Button>
         </div>
       </div>
     </header>
