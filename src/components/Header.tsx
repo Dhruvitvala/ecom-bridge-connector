@@ -4,6 +4,9 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
+// You can replace this with your actual logo URL
+const LOGO_URL = "https://placehold.co/200x200/7c3aed/ffffff?text=EB";
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   
@@ -31,9 +34,9 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <img 
-            src="/logo.png" 
+            src={LOGO_URL} 
             alt="Ecom Bridge Logo" 
-            className="h-8 w-auto" 
+            className="h-8 w-auto rounded-lg" 
             onError={(e) => {
               // Fallback to the colored div if image fails to load
               e.currentTarget.style.display = 'none';

@@ -1,5 +1,8 @@
 import { Github, Twitter, Mail } from 'lucide-react';
 
+// You can replace this with your actual logo URL
+const LOGO_URL = "https://placehold.co/200x200/7c3aed/ffffff?text=EB";
+
 export function Footer() {
   return (
     <footer className="border-t bg-muted/30">
@@ -8,9 +11,9 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="/logo.png" 
+                src={LOGO_URL}
                 alt="Ecom Bridge Logo" 
-                className="h-8 w-auto" 
+                className="h-8 w-auto rounded-lg" 
                 onError={(e) => {
                   // Fallback to the colored div if image fails to load
                   e.currentTarget.style.display = 'none';
