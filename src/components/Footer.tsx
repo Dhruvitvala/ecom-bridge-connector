@@ -1,4 +1,3 @@
-
 import { Github, Twitter, Mail } from 'lucide-react';
 
 export function Footer() {
@@ -8,7 +7,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-primary"></div>
+              <img 
+                src="/logo.png" 
+                alt="Ecom Bridge Logo" 
+                className="h-8 w-auto" 
+                onError={(e) => {
+                  // Fallback to the colored div if image fails to load
+                  e.currentTarget.style.display = 'none';
+                  const fallbackDiv = document.createElement('div');
+                  fallbackDiv.className = 'h-8 w-8 rounded-lg bg-primary';
+                  e.currentTarget.parentNode?.insertBefore(fallbackDiv, e.currentTarget);
+                }}
+              />
               <span className="font-medium text-lg">Ecom Bridge</span>
             </div>
             <p className="text-muted-foreground max-w-md mb-4">

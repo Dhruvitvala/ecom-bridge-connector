@@ -30,7 +30,18 @@ export function Header() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-primary"></div>
+          <img 
+            src="/logo.png" 
+            alt="Ecom Bridge Logo" 
+            className="h-8 w-auto" 
+            onError={(e) => {
+              // Fallback to the colored div if image fails to load
+              e.currentTarget.style.display = 'none';
+              const fallbackDiv = document.createElement('div');
+              fallbackDiv.className = 'h-8 w-8 rounded-lg bg-primary';
+              e.currentTarget.parentNode?.insertBefore(fallbackDiv, e.currentTarget);
+            }}
+          />
           <span className="font-medium text-lg">Ecom Bridge</span>
         </div>
         
