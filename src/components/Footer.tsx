@@ -1,3 +1,4 @@
+
 import { Github, Twitter, Mail } from 'lucide-react';
 
 // Using the uploaded logo image
@@ -58,11 +59,6 @@ export function Footer() {
               <li>
                 <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
                   Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Documentation
                 </a>
               </li>
               <li>
