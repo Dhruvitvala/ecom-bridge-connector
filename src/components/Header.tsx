@@ -1,6 +1,6 @@
+
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 // Using the uploaded logo image
@@ -78,15 +78,6 @@ export function Header() {
             Demo
           </a>
         </nav>
-        
-        <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex" onClick={() => window.open('/documentation', '_blank')}>
-            Documentation
-          </Button>
-          <Button size="sm" onClick={() => window.open('/get-started', '_blank')}>
-            Get Started
-          </Button>
-        </div>
       </div>
     </header>
   );
