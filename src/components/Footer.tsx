@@ -1,7 +1,7 @@
 import { Github, Twitter, Mail } from 'lucide-react';
 
-// You can replace this with your actual logo URL
-const LOGO_URL = "https://placehold.co/200x200/7c3aed/ffffff?text=EB";
+// Using the uploaded logo image
+const LOGO_URL = "/lovable-uploads/e6093063-4191-4064-900d-15d2562f5bdb.png";
 
 export function Footer() {
   return (
@@ -13,12 +13,12 @@ export function Footer() {
               <img 
                 src={LOGO_URL}
                 alt="Ecom Bridge Logo" 
-                className="h-8 w-auto rounded-lg" 
+                className="h-12 w-auto" 
                 onError={(e) => {
                   // Fallback to the colored div if image fails to load
                   e.currentTarget.style.display = 'none';
                   const fallbackDiv = document.createElement('div');
-                  fallbackDiv.className = 'h-8 w-8 rounded-lg bg-primary';
+                  fallbackDiv.className = 'h-12 w-12 rounded-lg bg-primary';
                   e.currentTarget.parentNode?.insertBefore(fallbackDiv, e.currentTarget);
                 }}
               />
